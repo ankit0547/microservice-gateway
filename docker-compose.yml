@@ -1,0 +1,59 @@
+version: '2'
+services:
+    student-service:
+        build:
+            context: "./vaccine-app-student-service/"
+        hostname: student-service
+        ports:
+            - "4801:4801"
+        links:
+            - gateway
+    drive-service:
+        build:
+            context: "./vaccine-app-drive-service/"
+        hostname: drive-service
+        ports:
+            - "4802:4802"
+        links:
+            - gateway
+    gateway:
+        image: bits-gateway
+        hostname: gateway
+        ports:
+            - "5001:5001"
+# version: '3'
+
+# services:
+#   student-service:
+#       image: bits/vaccine-student-service   
+#       restart: always
+#       ports: ["4801:4801"]      
+#       # environment: ["VAR_1=${VAR_1}","VAR2=${VAR2}"] # using .env file
+#       networks: [backend]
+#       expose:
+#         - '4801'
+
+#   vaccine-drive-service:
+#       image: bits/vaccine-student-service   
+#       restart: always
+#       ports: ["4802:4802"]      
+#       # environment: ["VAR_1=${VAR_1}","VAR2=${VAR2}"] # using .env file
+#       networks: [backend]
+#       expose:
+#         - '4801'      
+
+
+#   api-gateway:
+#     image: bits/vaccine-api-gateway
+#     restart: always
+#     ports: ["5001:5001"]
+#     networks: [backend]
+#     expose:
+#         - '5001'
+#     depends_on: [student-service]
+
+# networks:
+#   backend:
+#     driver: "bridge"
+#   frontend:
+#     driver: "host"
