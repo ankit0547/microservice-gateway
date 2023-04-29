@@ -11,10 +11,11 @@ export const ROUTES = [
     // },
     proxy: {
       target: "http://localhost:4801",
-      //   changeOrigin: true,
-      //   pathRewrite: {
-      //     [`^/student`]: "",
-      //   },
+      // changeOrigin: true,
+      // pathRewrite: {
+      //   [`^/student/`]: "",
+      //   // [`^/student/`]: "",
+      // },
     },
   },
   {
@@ -27,10 +28,10 @@ export const ROUTES = [
     // },
     proxy: {
       target: "http://localhost:4802",
-      //   changeOrigin: true,
-      //   pathRewrite: {
-      //     [`^/student`]: "",
-      //   },
+      // changeOrigin: true,
+      // pathRewrite: {
+      //   [`^/vaccineDrive`]: "",
+      // },
     },
   },
 ];

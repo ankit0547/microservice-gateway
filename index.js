@@ -1,5 +1,5 @@
 import express from "express";
-import bodyParser from "body-parser";
+// import bodyParser from "body-parser";
 import cors from "cors";
 // import connectdb from "./src/config/dbConfig.js";
 // import options from "./src/swagger/options.js";
@@ -29,10 +29,10 @@ const app = express();
 // );
 
 // parse application/json
-app.use(bodyParser.json());
+// app.use(bodyParser.json());
 
-// parse application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({ extended: false }));
+// // parse application/x-www-form-urlencoded
+// app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cors());
 
 setupLogging(app);
