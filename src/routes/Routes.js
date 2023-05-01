@@ -19,6 +19,22 @@ export const ROUTES = [
     },
   },
   {
+    url: "/landing",
+    auth: false,
+    // creditCheck: false,
+    // rateLimit: {
+    //   windowMs: 15 * 60 * 1000,
+    //   max: 5,
+    // },
+    proxy: {
+      target: "http://localhost:4803",
+      // changeOrigin: true,
+      // pathRewrite: {
+      //   [`^/vaccineDrive`]: "",
+      // },
+    },
+  },
+  {
     url: "/vaccineDrive",
     auth: false,
     // creditCheck: false,
