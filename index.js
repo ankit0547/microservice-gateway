@@ -14,7 +14,7 @@ dotenv.config();
 
 console.log(process.env.PORT);
 
-const PORT = process.env.PORT || 5001;
+const PORT = process.env.PORT || 4800;
 
 //Connect to Database
 // connectdb();

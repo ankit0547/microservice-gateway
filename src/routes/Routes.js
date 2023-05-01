@@ -10,7 +10,7 @@ export const ROUTES = [
     //   max: 5,
     // },
     proxy: {
-      target: "http://localhost:4801",
+      target: "http://student:4801",
       // changeOrigin: true,
       // pathRewrite: {
       //   [`^/student/`]: "",
@@ -43,7 +43,7 @@ export const ROUTES = [
     //   max: 5,
     // },
     proxy: {
-      target: "http://localhost:4802",
+      target: "http://vaccine-drive:4802",
       // changeOrigin: true,
       // pathRewrite: {
       //   [`^/vaccineDrive`]: "",
